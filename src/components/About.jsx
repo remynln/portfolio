@@ -39,7 +39,7 @@ const About = () => {
       </motion.div>
 
       <motion.p variants={fadeIn("", "", 0.1, 1)} className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
-        I am a full-stack software engineer with a passion for building web applications. I have experience in developing web applications using JavaScript, React, Node.js, Express, and MongoDB. I am also familiar with Python, Django, and PostgreSQL. I am a quick learner and I am always looking to learn new technologies and improve my skills. I am a team player and I am always ready to collaborate with others to build amazing products.
+      I am Rémy Noulin, a 5th-year student at Epitech Toulouse, pursuing an expert degree in Information Technology. With a strong foundation in programming languages such as C, C++, Python, and JavaScript, I have honed my skills through various internships and projects. My experience spans across web development, DevOps, and cybersecurity, complemented by a successful stint at a Microsoft Hackathon where I developed an augmented reality solution. I have also engaged in international studies at Chung Ang University in Seoul, further broadening my technical and cultural perspective. My passion for technology drives me to continuously learn and contribute to innovative projects.
       </motion.p>
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (

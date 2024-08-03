@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion'
 import { styles } from '../styles'
 import { ComputersCanvas } from './canvas'
+import TypeWriter from 'typewriter-effect';
+
+import { technologies } from '../constants'
 
 const Hero = () => {
   return (
@@ -13,7 +16,12 @@ const Hero = () => {
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>Hi, I'm <span className='text-[#915eff]'>Remy</span></h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            A completer...
+            I'm a <span className="text-[#915eff] font-bold"><TypeWriter
+              options={{
+                strings: technologies.filter(tech => tech.type_show).map(tech => tech.name),
+                autoStart: true,
+                loop: true
+              }}/></span>developper
             {/* classname="sm:block hidden" */}
           </p>
         </div>

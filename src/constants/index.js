@@ -15,14 +15,13 @@ import {
     git,
     figma,
     docker,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
-    carrent,
-    jobit,
-    tripguide,
+    tuneup,
     threejs,
+    medinbox,
+    epitech,
+    microsoft,
+    arcys,
+    elyade
 } from "../assets";
 
 export const navLinks = [
@@ -38,6 +37,10 @@ export const navLinks = [
         id: "contact",
         title: "Contact",
     },
+    // {
+    //     id: "cv",
+    //     title: "CV",
+    // }
 ];
 
 const services = [
@@ -54,7 +57,7 @@ const services = [
         icon: backend,
     },
     {
-        title: "Cybersecurity",
+        title: "Cybersecurity Specialist",
         icon: creator,
     },
 ];
@@ -63,108 +66,124 @@ const technologies = [
     {
         name: "HTML 5",
         icon: html,
+        link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+        type_show: true,
     },
     {
         name: "CSS 3",
         icon: css,
+        link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+        type_show: true,
     },
     {
         name: "JavaScript",
         icon: javascript,
+        link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        type_show: true,
     },
     {
         name: "TypeScript",
         icon: typescript,
+        link: "https://www.typescriptlang.org/",
+        type_show: true,
     },
     {
         name: "React JS",
         icon: reactjs,
-    },
-    {
-        name: "Redux Toolkit",
-        icon: redux,
+        link: "https://reactjs.org/",
+        type_show: true,
     },
     {
         name: "Tailwind CSS",
         icon: tailwind,
+        link: "https://tailwindcss.com/",
+        type_show: true,
     },
     {
         name: "Node JS",
         icon: nodejs,
+        link: "https://nodejs.org/en/",
+        type_show: true,
     },
     {
         name: "MongoDB",
         icon: mongodb,
+        link: "https://www.mongodb.com/",
+        type_show: true,
     },
     {
         name: "Three JS",
         icon: threejs,
+        link: "https://threejs.org/",
+        type_show: true,
     },
     {
         name: "git",
         icon: git,
+        link: "https://git-scm.com/",
     },
     {
         name: "figma",
         icon: figma,
+        link: "https://www.figma.com/",
     },
     {
         name: "docker",
         icon: docker,
+        link: "https://www.docker.com/",
+        type_show: true,
     },
 ];
 
 const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#383E56",
-        date: "March 2020 - April 2021",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
+        title: "Intern",
+        company_name: "MEDINBOX",
+        icon: medinbox,
         iconBg: "#E6DEDD",
-        date: "Jan 2021 - Feb 2022",
+        date: "Apr 2023 - Aug 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Worked on AI projects like chatbot and video transcription application using React and Docker.",
         ],
     },
     {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
+        title: "Intern",
+        company_name: "AER Epitech Toulouse",
+        icon: epitech,
         iconBg: "#383E56",
-        date: "Jan 2022 - Jan 2023",
+        date: "Feb 2022 - Mar 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Pedagogical assistant and coach, handled lower year batches.",
         ],
     },
     {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
+        title: "Hackathon Winner",
+        company_name: "Microsoft Ready Developer One",
+        icon: microsoft,
         iconBg: "#E6DEDD",
-        date: "Jan 2023 - Present",
+        date: "May 2022",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Developed an augmented reality solution on HoloLens 2.",
+        ],
+    },
+    {
+        title: "Intern",
+        company_name: "ARCYS",
+        icon: arcys,
+        iconBg: "#E6DEDD",
+        date: "Jul 2021 - Dec 2021",
+        points: [
+            "Developed a database compliance tool, network diode testing tool, and Excel macros for accounting.",
+        ],
+    },
+    {
+        title: "Temporary Contract",
+        company_name: "Elyade Gérance",
+        icon: elyade,
+        iconBg: "#383E56",
+        date: "Mar 2020",
+        points: [
+            "Assisted in setting up remote work for 103 employees during COVID-19 lockdown.",
         ],
     },
 ];
@@ -198,12 +217,12 @@ const testimonials = [
 
 const projects = [
     {
-        name: "Car Rent",
+        name: "Tune'Up",
         description:
-            "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+            "Web-based platform that allows users to support their favorite musicians in exchange of exclusive advantages.",
         tags: [
             {
-                name: "react",
+                name: "angular",
                 color: "blue-text-gradient",
             },
             {
@@ -211,54 +230,17 @@ const projects = [
                 color: "green-text-gradient",
             },
             {
-                name: "tailwind",
+                name: "typescript",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "express",
                 color: "pink-text-gradient",
             },
         ],
-        image: carrent,
-        source_code_link: "https://github.com/",
-    },
-    {
-        name: "Job IT",
-        description:
-            "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-        tags: [
-            {
-                name: "react",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "restapi",
-                color: "green-text-gradient",
-            },
-            {
-                name: "scss",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: jobit,
-        source_code_link: "https://github.com/",
-    },
-    {
-        name: "Trip Guide",
-        description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-        tags: [
-            {
-                name: "nextjs",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "supabase",
-                color: "green-text-gradient",
-            },
-            {
-                name: "css",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: tripguide,
-        source_code_link: "https://github.com/",
+        image: tuneup,
+        source_code_link: "https://github.com/TuneUp-Music/",
+        link: "https://tuneup-music.com/",
     },
 ];
 
