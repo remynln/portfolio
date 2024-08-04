@@ -17,18 +17,29 @@ import javascript from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import c from "./tech/c.png";
+import cpp from "./tech/cpp.png";
+import csharp from "./tech/csharp.png";
+import angular from "./tech/angular.png";
+import jenkins from "./tech/jenkins.png";
+import linux from "./tech/unix.png";
 
 import medinbox from './company/medinbox.png';
 import epitech from './company/epitech.png';
 import microsoft from './company/microsoft.png';
 import arcys from './company/arcys.png';
 import elyade from './company/elyade.png';
+import chungang from './company/chungang.png';
+import lycee from './company/lycee.png';
 
 import tuneup from "./tuneup.png";
+import whanos from "./whanos.jpg";
+import portfolio from "./portfolio.png";
+import vinted from "./vinted.png";
+import area from "./area.png";
 
 export {
   logo,
@@ -48,7 +59,6 @@ export {
   mongodb,
   nodejs,
   reactjs,
-  redux,
   tailwind,
   typescript,
   threejs,
@@ -58,5 +68,17 @@ export {
   microsoft,
   arcys,
   elyade,
-  file
+  file,
+  chungang,
+  lycee,
+  c,
+  cpp,
+  csharp,
+  angular,
+  jenkins,
+  linux,
+  whanos,
+  portfolio,
+  vinted,
+  area
 };

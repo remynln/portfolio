@@ -8,7 +8,6 @@ import {
     html,
     css,
     reactjs,
-    redux,
     tailwind,
     nodejs,
     mongodb,
@@ -21,7 +20,20 @@ import {
     epitech,
     microsoft,
     arcys,
-    elyade
+    elyade,
+    chungang,
+    lycee,
+    close,
+    c,
+    cpp,
+    csharp,
+    angular,
+    jenkins,
+    linux,
+    whanos,
+    portfolio,
+    vinted,
+    area
 } from "../assets";
 
 export const navLinks = [
@@ -37,10 +49,10 @@ export const navLinks = [
         id: "contact",
         title: "Contact",
     },
-    // {
-    //     id: "cv",
-    //     title: "CV",
-    // }
+    {
+        id: "socials",
+        title: "Socials",
+    },
 ];
 
 const services = [
@@ -64,13 +76,31 @@ const services = [
 
 const technologies = [
     {
-        name: "HTML 5",
+        name: "C",
+        icon: c,
+        link: "https://en.wikipedia.org/wiki/C_(programming_language)",
+        type_show: true,
+    },
+    {
+        name: "C++",
+        icon: cpp,
+        link: "https://isocpp.org/",
+        type_show: true,
+    },
+    {
+        name: "C#",
+        icon: csharp,
+        link: "https://learn.microsoft.com/en-us/dotnet/csharp/",
+        type_show: true,
+    },
+    {
+        name: "HTML",
         icon: html,
         link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
         type_show: true,
     },
     {
-        name: "CSS 3",
+        name: "CSS",
         icon: css,
         link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
         type_show: true,
@@ -85,6 +115,12 @@ const technologies = [
         name: "TypeScript",
         icon: typescript,
         link: "https://www.typescriptlang.org/",
+        type_show: true,
+    },
+    {
+        name: "Angular",
+        icon: angular,
+        link: "https://angular.dev/",
         type_show: true,
     },
     {
@@ -109,7 +145,7 @@ const technologies = [
         name: "MongoDB",
         icon: mongodb,
         link: "https://www.mongodb.com/",
-        type_show: true,
+        type_show: false,
     },
     {
         name: "Three JS",
@@ -118,72 +154,137 @@ const technologies = [
         type_show: true,
     },
     {
-        name: "git",
+        name: "Git",
         icon: git,
         link: "https://git-scm.com/",
+        type_show: false,
+
     },
     {
-        name: "figma",
+        name: "Figma",
         icon: figma,
         link: "https://www.figma.com/",
+        type_show: false,
     },
     {
-        name: "docker",
+        name: "Docker",
         icon: docker,
         link: "https://www.docker.com/",
         type_show: true,
+    },
+    {
+        name: "Jenkins",
+        icon: jenkins,
+        link: "https://www.jenkins.io/",
+        type_show: true,
+    },
+    {
+        name: "Linux/Unix",
+        icon: linux,
+        link: "https://www.linux.org/",
+        type_show: false,
     },
 ];
 
 const experiences = [
     {
+        title: "Student",
+        company_name: '<a href="https://epitech.eu/" target="__blank" style="color:#915eff;">Epitech</a>',
+        icon: epitech,
+        iconBg: "#E6DEDD",
+        date: "2020-2025",
+        points: [
+            "Studying computer science"
+        ],
+    },
+    {
+        title: "Exchange Student",
+        company_name: '<a href="https://neweng.cau.ac.kr/index.do" target="__blank" style="color:#915eff;">Chung Ang University</a>',
+        icon: chungang,
+        iconBg: "#E6DEDD",
+        date: "Sept 2023 - Jun 2024",
+        points: [
+            "Studying computer science and Korean society as an exchange student.",
+            "Travelled around asia to learn about different cultures.",
+        ],
+    },
+    {
         title: "Intern",
-        company_name: "MEDINBOX",
+        company_name: '<a href="https://www.medinbox.com/" target="__blank" style="color:#915eff;">MEDINBOX</a>',
         icon: medinbox,
         iconBg: "#E6DEDD",
         date: "Apr 2023 - Aug 2023",
         points: [
-            "Worked on AI projects like chatbot and video transcription application using React and Docker.",
+            "Web Transcribe project: Developed with React for its stability and familiarity, leverages OpenAI's REST API to provide an intuitive video interface for users to interact with AI. The system stores contextual information and user interactions to generate relevant AI responses and maintain natural conversations.",
+            "Voice Recon Exploitation: This project consists of a server (ASP .NET in C#), a client (Angular framework), and a database (MongoDB). The server handles client requests to process videos, transcribe text, and extract metadata, while the client provides a user-friendly interface to upload videos and select metadata options, with the database managing the necessary data operations."
+        ],
+    },
+    {
+        title: "Volunteering",
+        // company_name: '<a href="https://www.medinbox.com/" target="__blank" style="color:#915eff;">MEDINBOX</a>',
+        icon: close,
+        iconBg: "#E6DEDD",
+        date: "May 2023",
+        points: [
+            "Development of a photobooth application for an aeronautics company for the <a href='https://www.siae.fr/' target='__blank' style='color:#915eff;'>Paris Air Show</a> 2023"
         ],
     },
     {
         title: "Intern",
-        company_name: "AER Epitech Toulouse",
+        company_name: 'AER <a href="https://www.epitech.eu/" target="__blank" style="color:#915eff;">Epitech</a> Toulouse',
         icon: epitech,
-        iconBg: "#383E56",
+        iconBg: "#E6DEDD",
         date: "Feb 2022 - Mar 2023",
         points: [
             "Pedagogical assistant and coach, handled lower year batches.",
+            'Teaching and Coaching training (<a href="https://drive.google.com/file/d/1GTxr2gz-6_wCFkja7a4BbXY6b-g9GFzm/view?usp=sharing" target="__blank" style="color:#915eff;">certificate</a>)'
         ],
     },
     {
         title: "Hackathon Winner",
-        company_name: "Microsoft Ready Developer One",
+        company_name: '<a href="https://www.microsoft.com/" target="__blank" style="color:#915eff;">Microsoft</a> Ready Developer One',
         icon: microsoft,
         iconBg: "#E6DEDD",
         date: "May 2022",
         points: [
-            "Developed an augmented reality solution on HoloLens 2.",
+            "Theme: accessibility",
+            `Developed a solution on the <a href="https://www.microsoft.com/en-us/hololens/" target="__blank" style="color:#915eff;">Hololens 2</a> of an augmented reality game suitable for all audiences with hand tracking, eye tracking and voice recognition.`
         ],
     },
     {
         title: "Intern",
-        company_name: "ARCYS",
+        company_name: '<a href="https://arcys.fr/" target="__blank" style="color:#915eff;">ARCYS</a>',
         icon: arcys,
         iconBg: "#E6DEDD",
         date: "Jul 2021 - Dec 2021",
         points: [
-            "Developed a database compliance tool, network diode testing tool, and Excel macros for accounting.",
+            "Context: Migrating from <a href='https://en.wikipedia.org/wiki/Baan_Corporation' target='__blank' style='color:#915eff;'>BAAN 4</a> to <a href='https://www.infor.com/solutions/erp/ln' target='__blank' style='color:#915eff;'>Infor LN</a> ERP system.",
+            "Developped a tool to restructure postal address data for clients and suppliers to ensure compliance and usability ensuring seamless ERP integration.",
+            "Developped a tool aimed to retrieve RIB keys from IBANs for compatibility with the new ERP system.",
+            "Excel macro to automate recurring tasks on invoices not received (FNP)."
         ],
     },
     {
         title: "Temporary Contract",
-        company_name: "Elyade Gérance",
+        company_name: '<a href="https://www.elyade.com/" target="__blank" style="color:#915eff;">Elyade Gérance</a>',
         icon: elyade,
-        iconBg: "#383E56",
+        iconBg: "#E6DEDD",
         date: "Mar 2020",
         points: [
             "Assisted in setting up remote work for 103 employees during COVID-19 lockdown.",
+        ],
+    },
+    {
+        title: "Bac technologique (STI2D)",
+        company_name: '<a href="https://stephane-hessel.mon-ent-occitanie.fr/" target="__blank" style="color:#915eff;">Lycee Stephane Hessel</a>',
+        icon: lycee,
+        iconBg: "#383E56",
+        date: "2019 - 2020",
+        points: [
+            "Mention Bien",
+            "Specialized in digital systems and computer science.",
+            "Participated in the creation of a connected greenhouse.",
+            '<a href="https://www.cisco.com/" target="__blank" style="color:#915eff;">CISCO</a> Networking Essentials Training (<a href="https://drive.google.com/file/d/1saPQcHlz1gFN7Rw5q4ExpaQI5ZA_qsAs/view?usp=sharing" target="__blank" style="color:#915eff;">certificate</a>)'
         ],
     },
 ];
@@ -219,7 +320,7 @@ const projects = [
     {
         name: "Tune'Up",
         description:
-            "Web-based platform that allows users to support their favorite musicians in exchange of exclusive advantages.",
+            "Web-based platform that allows users to support their favorite artists in exchange of exclusive advantages.",
         tags: [
             {
                 name: "angular",
@@ -241,6 +342,111 @@ const projects = [
         image: tuneup,
         source_code_link: "https://github.com/TuneUp-Music/",
         link: "https://tuneup-music.com/",
+    },
+    {
+        name: "Portfolio",
+        description:
+            "Personal portfolio website to showcase my work and skills.",
+        tags: [
+            {
+                name: "React",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Javascript",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "Taylwind CSS",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "Three JS",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: portfolio,
+        source_code_link: "https://github.com/remynln/portfolio",
+        link: "https://www.remynln.com/",
+    },
+    {
+        name: "Whanos",
+        description:
+            "Automates application deployment using Docker, Jenkins, Ansible, and Kubernetes, allowing developers to deploy to a Kubernetes cluster with a simple Git push. It integrates containerization, task automation, configuration management, and orchestration.",
+        tags: [
+            {
+                name: "docker",
+                color: "orange-text-gradient",
+            },
+            {
+                name: "Jenkins",
+                color: "orange-text-gradient",
+            },
+            {
+                name: "Ansible",
+                color: "orange-text-gradient",
+            },
+            {
+                name: "Kubernetes",
+                color: "orange-text-gradient",
+            },
+            {
+                name: "GoogleCloud",
+                color: "orange-text-gradient",
+            },
+        ],
+        image: whanos,
+        source_code_link: "https://github.com/remynln/Whanos",
+    },
+    {
+        name: "AREA",
+        description:
+            "AREA (Action-REAction) involves creating an automation platform like <a href='https://ifttt.com/' target='__blank' style='color:#915eff;'>IFTTT</a> or <a href='https://zapier.com/' target='__blank' style='color:#915eff;'>Zapier</a>, integrating various services to trigger actions based on predefined conditions. The project includes developing a REST API-based application server, a web client, and a mobile client, with the core functionality revolving around connecting and automating tasks across multiple services",
+        tags: [
+            {
+                name: "React",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Flutter",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "express",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "mongodb",
+                color: "green-text-gradient",
+            },
+        ],
+        image: area,
+        source_code_link: "https://github.com/remynln/area",
+    },
+    {
+        name: "Vinted Discord Bot",
+        description:
+            "Vinted Discord Bot to get the most recent items from the Vinted website using scrapping.",
+        tags: [
+            {
+                name: "Node JS",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "Discord API",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "cloudscraper",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "mongodb",
+                color: "green-text-gradient",
+            },
+        ],
+        image: vinted,
+        source_code_link: "https://github.com/remynln/vinted_bot",
     },
 ];
 
