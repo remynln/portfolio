@@ -6,7 +6,7 @@ import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import { styles } from '../styles'
 import { navLinks } from '../constants'
 import { logo, menu, close, france, english } from '../assets'
-import { setLanguage, getLanguage } from '../constants'
+import { setLanguage, getLanguage, initLanguage } from '../constants'
 
 const languages = [
   {
@@ -21,6 +21,10 @@ const languages = [
   },
 ]
 const Navbar = () => {
+
+  useEffect(() => {
+    initLanguage()
+  }, []);
 
   const [active, setActive] = useState("")
   const [toggle, setToggle] = useState(false)
