@@ -6,6 +6,7 @@ import { initLanguage } from './constants'
 const App = () => {
 
   useEffect(() => {
+    console.log('App mounted')
     initLanguage()
   }, []);
 
