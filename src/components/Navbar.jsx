@@ -64,7 +64,7 @@ const Navbar = () => {
               <option value="fr">FR</option>
             </select> */}
             <Listbox value={selectedLanguage} onChange={handleLanguageChange}>
-              <div className="relative w-auto">
+              <div className="relative w-auto mt-[-5px]">
                 <ListboxButton className="relative w-full cursor-default rounded-md bg-primary py-1.5 pl-3 pr-10 text-left text-secondary shadow-sm ring-1 ring-inset ring-primary focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6">
                   <span className="flex items-center">
                     <img alt="" src={selectedLanguage.flag
