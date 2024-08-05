@@ -7,6 +7,7 @@ import { file, github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import { work_title } from "../constants";
 
 const ProjectCard = ({
   index,
@@ -81,8 +82,8 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <p className={`${styles.sectionSubText} `}>{work_title.subtitle}</p>
+        <h2 className={`${styles.sectionHeadText}`}>{work_title.title}</h2>
       </motion.div>
 
       <div className='w-full flex'>
@@ -90,7 +91,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          I have worked on a variety of projects, ranging from simple websites to complex web applications. Here are some of the projects I have worked on:
+          {work_title.content}
         </motion.p>
       </div>
 

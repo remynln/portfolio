@@ -4,13 +4,14 @@ import { motion } from 'framer-motion'
 import { SectionWrapper } from '../hoc'
 import { styles } from '../styles'
 import { textVariant } from '../utils/motion'
+import { socials_title } from '../constants'
 
 const Socials = () => {
     return (
         <>
             <motion.div variants={textVariant()}>
-                <p className={styles.sectionSubText}>More about me</p>
-                <h2 className={styles.sectionHeadText}>Socials.</h2>
+                <p className={styles.sectionSubText}>{socials_title.subtitle}</p>
+                <h2 className={styles.sectionHeadText}>{socials_title.title}</h2>
             </motion.div>
             <div className="flex sm:flex-row mt-7">
                 <a

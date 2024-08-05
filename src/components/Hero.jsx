@@ -4,6 +4,7 @@ import { ComputersCanvas } from './canvas'
 import TypeWriter from 'typewriter-effect';
 
 import { technologies } from '../constants'
+import { introduction_title } from '../constants';
 
 const Hero = () => {
   return (
@@ -14,14 +15,14 @@ const Hero = () => {
           <div className='w-1 sm:h-80 h-40 violet-gradient' />
         </div>
         <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>Hi, I'm <span className='text-[#915eff]'>Remy</span></h1>
+          <h1 className={`${styles.heroHeadText} text-white`}>{introduction_title.title} <span className='text-[#915eff]'>{introduction_title.name}</span></h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I'm a <span className="text-[#915eff] font-bold"><TypeWriter
+            {introduction_title.first} <span className="text-[#915eff] font-bold"><TypeWriter
               options={{
                 strings: technologies.filter(tech => tech.type_show).map(tech => tech.name),
                 autoStart: true,
                 loop: true
-              }} /></span>developper
+              }} /></span>{introduction_title.second}
             {/* classname="sm:block hidden" */}
           </p>
         </div>
