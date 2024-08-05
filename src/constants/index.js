@@ -34,7 +34,7 @@ const initLanguage = () => {
 }
 
 const getLanguage = () => {
-    return localStorage.getItem('lang');
+    return localStorage.getItem('lang') || 'en';
 }
 
 const setLanguage = (lang) => {

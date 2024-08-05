@@ -40,8 +40,9 @@ import whanos from "./whanos.jpg";
 import portfolio from "./portfolio.png";
 import vinted from "./vinted.png";
 import area from "./area.png";
-import france from "./france.png";
-import english from "./english.png";
+
+// import english from "./flags/english.png";
+// import french from "./flags/french.png";
 
 export {
   logo,
@@ -83,6 +84,6 @@ export {
   portfolio,
   vinted,
   area,
-  france,
-  english
+  // english,
+  // french,
 };

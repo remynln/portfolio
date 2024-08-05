@@ -5,26 +5,26 @@ import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 
 import { styles } from '../styles'
 import { navLinks } from '../constants'
-import { logo, menu, close, france, english } from '../assets'
+import { logo, menu, close } from '../assets'
 import { setLanguage, getLanguage } from '../constants'
 
 const languages = [
   {
     id: 1,
     name: 'en',
-    flag: english,
+    flag: "./flags/english.png",
   },
   {
     id: 2,
     name: 'fr',
-    flag: france,
+    flag: "./flags/french.png",
   },
 ]
 const Navbar = () => {
 
   const [active, setActive] = useState("")
   const [toggle, setToggle] = useState(false)
-  const [selectedLanguage, setselectedLanguage] = useState(languages.find((lang) => lang.name === getLanguage()));
+  const [selectedLanguage, setselectedLanguage] = useState(languages.find((lang) => lang.name === getLanguage() || 'en'));
 
   const handleLanguageChange = (e) => {
     console.log(e)
@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
+    className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link
           to="/"
