@@ -24,10 +24,9 @@ const Navbar = () => {
 
   const [active, setActive] = useState("")
   const [toggle, setToggle] = useState(false)
-  const [selectedLanguage, setselectedLanguage] = useState(languages.find((lang) => lang.name === getLanguage() || 'en'));
+  const [selectedLanguage, setselectedLanguage] = useState(languages.find((lang) => lang.name === getLanguage()));
 
   const handleLanguageChange = (e) => {
-    console.log(e)
     setselectedLanguage(e.name);
     setLanguage(e.name);
   };
