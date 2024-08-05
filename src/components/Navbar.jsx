@@ -6,7 +6,7 @@ import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import { styles } from '../styles'
 import { navLinks } from '../constants'
 import { logo, menu, close, france, english } from '../assets'
-import { setLanguage, getLanguage } from '../constants'
+import { setLanguage, getLanguage, initLanguage } from '../constants'
 
 const languages = [
   {
@@ -21,6 +21,9 @@ const languages = [
   },
 ]
 const Navbar = () => {
+
+  initLanguage();
+
   const [active, setActive] = useState("")
   const [toggle, setToggle] = useState(false)
   const [selectedLanguage, setselectedLanguage] = useState(languages.find((lang) => lang.name === getLanguage()));
@@ -128,8 +131,7 @@ const Navbar = () => {
                   <div className="relative w-auto">
                     <ListboxButton className="relative w-full cursor-default rounded-md bg-transparent py-1.5 pl-3 pr-10 text-left text-secondary shadow-sm ring-1 ring-inset ring-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6">
                       <span className="flex items-center">
-                        <img alt="" src={selectedLanguage.flag
-                        } className="h-5 w-5 flex-shrink-0 rounded-full" />
+                        <img alt="" src={selectedLanguage.flag} className="h-5 w-5 flex-shrink-0 rounded-full" />
                         <span className="ml-3 block truncate">{selectedLanguage.name}</span>
                       </span>
                       <span className="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
