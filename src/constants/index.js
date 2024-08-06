@@ -16,21 +16,7 @@ let introduction_title = indexen.introduction_title;
 
 
 const initLanguage = () => {
-    const saved = localStorage.getItem('lang')
-    if (saved === 'fr') {
-        navLinks = indexfr.navLinks;
-        services = indexfr.services;
-        technologies = indexfr.technologies;
-        experiences = indexfr.experiences;
-        testimonials = indexfr.testimonials;
-        projects = indexfr.projects;
-        about_title = indexfr.about_title;
-        experience_title = indexfr.experience_title;
-        work_title = indexfr.work_title;
-        contact_title = indexfr.contact_title;
-        socials_title = indexfr.socials_title;
-        introduction_title = indexfr.introduction_title;
-    }
+    localStorage.setItem('lang', 'en');
 }
 
 const getLanguage = () => {
