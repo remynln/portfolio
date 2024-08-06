@@ -16,7 +16,23 @@ let introduction_title = indexen.introduction_title;
 
 
 const initLanguage = () => {
-    localStorage.setItem('lang', 'en');
+    const lang = localStorage.getItem('lang')
+    if (!lang) {
+        localStorage.setItem('lang', 'en');
+    } else if (lang === 'fr') {
+        navLinks = indexen.navLinks;
+        services = indexen.services;
+        technologies = indexen.technologies;
+        experiences = indexen.experiences;
+        testimonials = indexen.testimonials;
+        projects = indexen.projects;
+        about_title = indexen.about_title;
+        experience_title = indexen.experience_title;
+        work_title = indexen.work_title;
+        contact_title = indexen.contact_title;
+        socials_title = indexen.socials_title;
+        introduction_title = indexen.introduction_title;
+    }
 }
 
 const getLanguage = () => {
