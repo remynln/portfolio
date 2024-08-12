@@ -367,7 +367,7 @@ const projects = [
         ],
         image: portfolio,
         source_code_link: "https://github.com/remynln/portfolio",
-        link: "https://www.remynln.com/",
+        link: "https://www.remynln.fr/",
     },
     {
         name: "Whanos",
