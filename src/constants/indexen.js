@@ -477,6 +477,9 @@ const contact_title = {
     message: "What's your message?",
     message_placeholder: "Your message",
     send: "Send",
+    sending: "Sending...",
+    failed: "Failed to send message!",
+    sent: "Message sent!",
 }
 
 const socials_title = {

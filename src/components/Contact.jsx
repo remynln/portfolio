@@ -12,11 +12,12 @@ import { contact_title } from "../constants"
 const Contact = () => {
   const formRef = useRef()
   const [form, setForm] = useState({
-    name: "",
-    email: "",
+    user_name: "",
+    user_email: "",
     message: "",
   })
   const [loading, setLoading] = useState(false)
+  const [sent, setSent] = useState(false)
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -28,29 +29,33 @@ const Contact = () => {
     e.preventDefault()
     console.log(form)
     setLoading(true)
-    emailjs.send(
-      "service_cn75qg7",
-      "template_rehnimb",
-    {
-      from_name: form.name,
-      to_name: "Remy",
-      from_email: form.email,
-      to_email: "remy.noulin@epitech.eu",
-      message: form.message,
-    },
-    "user_ga4CtbB39QfayglLi"
-    ).then((res) => {
+    emailjs.sendForm('service_cn75qg7', 'template_rehnimb', formRef.current, {
+      publicKey: "ga4CtbB39QfayglLi"
+    })
+    // emailjs.send(
+    //   "service_cn75qg7",
+    //   "template_rehnimb",
+    // {
+    //   from_name: form.name,
+    //   to_name: "Remy",
+    //   from_email: form.email,
+    //   to_email: "remy.noulin@epitech.eu",
+    //   message: form.message,
+    // },
+    // "user_ga4CtbB39QfayglLi"
+    // )
+    .then((res) => {
       setLoading(false)
-      alert("Message sent successfully!")
       setForm({
         name: "",
         email: "",
         message: "",
       })
+      setSent(true)
     }, (error) => {
       setLoading(false)
       console.error(error)
-      alert("Failed to send message!")
+      setSent(false)
     }
   )
   }
@@ -75,7 +80,7 @@ const Contact = () => {
             <span className='text-white font-medium mb-4'>{contact_title.name}</span>
             <input
               type='text'
-              name='name'
+              name='user_name'
               value={form.name}
               onChange={handleChange}
               placeholder={contact_title.name_placeholder}
@@ -86,7 +91,7 @@ const Contact = () => {
             <span className='text-white font-medium mb-4'>{contact_title.email}</span>
             <input
               type='email'
-              name='email'
+              name='user_email'
               value={form.email}
               onChange={handleChange}
               placeholder={contact_title.email_placeholder}
@@ -109,7 +114,7 @@ const Contact = () => {
             type='submit'
             className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
           >
-            {loading ? "Sending..." : "Send"}
+            {loading ? contact_title.sending : (sent ? contact_title.sent : contact_title.send)}
           </button>
         </form>
       </motion.div>

@@ -474,6 +474,9 @@ const contact_title = {
     email: "Quel est votre email ?",
     message: "Quel est votre message ?",
     send: "Envoyer",
+    sending: "Envoi en cours...",
+    failed: "Une erreur s'est produite. Veuillez réessayer.",
+    sent: "Message envoyé !",
 }
 
 const socials_title = {
